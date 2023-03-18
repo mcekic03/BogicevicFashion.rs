@@ -6,6 +6,7 @@
   "name": "bogicevicfashion",
   "version": "1.0.0",
   "description": "ecommerce",
+  "default": "index.html",
   "devDependencies": {
     "parcel": "^2.8.3"
   },
