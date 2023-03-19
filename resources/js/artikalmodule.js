@@ -118,6 +118,7 @@ export function generacijaartikla(pod,pretraga=false){
                     <div class="col span-1-of-2 porukakorpa"> 
                         <p>Cena Artikla:</p>
                         <p>${e.cena[0]} RSD</p>
+                        
                     </div>
 
                    
