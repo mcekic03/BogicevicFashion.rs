@@ -105,7 +105,6 @@ window.addEventListener('click', function(event){
 
 
 window.addEventListener('load', function(event){
-  console.log(JSON.parse(sessionStorage.getItem('setovaniartikli')))
   let hhtml = generacijaartikla(JSON.parse(sessionStorage.getItem('setovaniartikli')), false);
     prozorartikli.innerHTML = ' ';
     prozorartikli.insertAdjacentHTML("beforeend", hhtml)

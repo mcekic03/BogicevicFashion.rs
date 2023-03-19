@@ -3,17 +3,15 @@
 import {ArtikalKorpa, nizartikli} from './artikalklasa.js'
 let podvrsta =[];
 const divslike = document.querySelector('.divslikesrc')
-console.log(divslike.children)
 const divovi = Array.from(divslike.children);
 
  
 
 function raspodela(p){
     podvrsta = [];
-   console.log(nizartikli);
+    console.log(nizartikli);
     nizartikli.forEach(el => {
-        console.log(el.podvrsta);
-        console.log(p);
+       
         if(el.podvrsta === p){
             podvrsta.push(el);
         }
@@ -60,7 +58,7 @@ export function generacijaartikla(pod,pretraga=false){
                 let d = Array.from(el.children);
         
                 d.forEach(ee =>{
-                    console.log(ee.src)
+                    
                     let html = `<img  class="slikaartikal" src="${ee.src}" alt="">`
                     slikehtml = slikehtml + html;
                 })
