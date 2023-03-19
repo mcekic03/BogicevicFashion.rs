@@ -2,6 +2,10 @@
 
 import {ArtikalKorpa, nizartikli} from './artikalklasa.js'
 let podvrsta =[];
+const divslike = document.querySelector('.divslikesrc')
+console.log(divslike.children)
+const divovi = Array.from(divslike.children);
+
  
 
 function raspodela(p){
@@ -49,10 +53,19 @@ export function generacijaartikla(pod,pretraga=false){
             velicinehtml = velicinehtml + html;
         })
 
-        e.putanje.forEach(el => {
-           let html = `<img  class="slikaartikal" src="resources/img/${el}.jpg" alt="">`
-            slikehtml = slikehtml + html;
+        divovi.forEach(el =>{
+            if(el.dataset.ime === e.ime.trim()){
+                let d = Array.from(el.children);
+                console.log(d);
+                d.forEach(ee =>{
+                    console.log(ee.src)
+                    let html = `<img  class="slikaartikal" src="${ee.src}" alt="">`
+                    slikehtml = slikehtml + html;
+                })
+            }
         })
+
+        
         let markup = `
         
         <div class="artikal">
