@@ -12,6 +12,8 @@ function raspodela(p){
     podvrsta = [];
    console.log(nizartikli);
     nizartikli.forEach(el => {
+        console.log(el.podvrsta);
+        console.log(p);
         if(el.podvrsta === p){
             podvrsta.push(el);
         }
@@ -56,7 +58,7 @@ export function generacijaartikla(pod,pretraga=false){
         divovi.forEach(el =>{
             if(el.dataset.ime === e.ime.trim()){
                 let d = Array.from(el.children);
-                console.log(d);
+        
                 d.forEach(ee =>{
                     console.log(ee.src)
                     let html = `<img  class="slikaartikal" src="${ee.src}" alt="">`
@@ -117,7 +119,7 @@ export function generacijaartikla(pod,pretraga=false){
                     </div>
                     <div class="col span-1-of-2 porukakorpa"> 
                         <p>Cena Artikla:</p>
-                        <p>${e.cena[0]}</p>
+                        <p>${e.cena[0]} RSD</p>
                     </div>
 
                    

@@ -175,6 +175,7 @@ window.addEventListener('click', function(e){
         break;
         case 'Mrezasti unihop':
           console.log(2)
+          
           html = generacijaartikla(e.target.textContent, false);
           prozorartikli.innerHTML = ' ';
         prozorartikli.insertAdjacentHTML("beforeend", html)
