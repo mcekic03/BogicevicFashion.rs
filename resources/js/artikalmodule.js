@@ -50,7 +50,7 @@ export function generacijaartikla(pod,pretraga=false){
         })
 
         e.putanje.forEach(el => {
-           let html = `<img  class="slikaartikal" src="https://drive.google.com/uc?id=${el}" alt="">`
+           let html = `<img  class="slikaartikal" src="resources/img/${el}.jpg" alt="">`
             slikehtml = slikehtml + html;
         })
         let markup = `
