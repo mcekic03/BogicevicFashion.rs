@@ -156,7 +156,9 @@ export function KorpaView(NizKorpaArtikli){
     let gotovhtml = ' ';
 
     
+    
 
+    
     NizKorpaArtikli.forEach(el => {
         let markup = `
     
@@ -173,6 +175,8 @@ export function KorpaView(NizKorpaArtikli){
         gotovhtml += markup;
 
     })
+
+    
 
     return gotovhtml;
     

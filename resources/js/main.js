@@ -216,26 +216,11 @@ window.addEventListener('click', function(e){
 
 
 
-const addtocart = document.querySelectorAll('.addtocart');
 
-addtocart.forEach(e => {
-  e.addEventListener('click',function(){
-
-    if(izabranaboja === ' ' || izabranavelicina === ' '){
-    porukaartikal.innerHTML = "Morate izabrati boju i velicinu ne samo jedno!";
-    porukaartikal.style.color = 'red';
-    }
-    else{
-    porukaartikal.innerHTML = `Izabrali ste: ${izabranaboja} boju u ${izabranavelicina} velicini `;
-    }
-    
-    
-    
-    });
-})
 
 let izabranaboja = ' ';
 let izabranavelicina = ' ';
+
 prozorartikli.addEventListener('click', function(e){
   
   
@@ -306,7 +291,6 @@ prozorartikli.addEventListener('click', function(e){
 
   //addtocart
 
-  
 
   if(e.target.classList.contains('addtocart') && izabranaboja != ' ' && izabranavelicina != ' '){
     
@@ -331,6 +315,8 @@ prozorartikli.addEventListener('click', function(e){
     Storage(nizKorpaArtikli,true);
     window.location.reload();
   }
+  
+  
 
   //slikauvelicanje
   
@@ -351,7 +337,7 @@ btn.addEventListener('click', function(){
   modal.style.display = "block";
   let gotovhtml = KorpaView(Storage(' ',false));
   
-  //console.log(Storage('',false));
+  
 
   const resultKorpa = document.querySelector('.resultKorpa')
   resultKorpa.innerHTML = ' ';
@@ -359,7 +345,7 @@ btn.addEventListener('click', function(){
   resultKorpa.insertAdjacentHTML("beforeend" , gotovhtml);
 
   
-  let nizartikla1 = Array.from(Storage('',false));
+  let nizartikla1 = Array.from(Storage(' ',false));
   
   let konacnacena = 0;
 
@@ -443,7 +429,8 @@ const setCurrentPage = (pageNum) => {
 const potvrdaislanje = document.querySelector('.submit_btn')
 
 potvrdaislanje.addEventListener("click", function(e){
-  let niz = Storage('',false);
+   let niz = Storage('',false);
+  
   if(niz.length != 0){
     
   
@@ -506,11 +493,12 @@ potvrdaislanje.addEventListener("click", function(e){
       <h3>Srdacan pozdrav od kompanije Bogicevic Fashion</h3>
       
       `
-    }).then(function()
-    {
+    }).then(function(){
+      e.target.parentElement.parentElement.parentElement.parentElement.children[0].children[0].children[0].innerHTML = " "
       localStorage.clear();
-    }
-    );
+    })
+
+    
     Email.send({
       SecureToken : "1e2df8a2-6368-439a-9114-1c82146579c2",
       To : `porudzbenice.bogicevic@gmail.com`,
@@ -551,10 +539,10 @@ potvrdaislanje.addEventListener("click", function(e){
 
       `
     }).then(function(){
+      e.target.parentElement.parentElement.parentElement.parentElement.children[0].children[0].children[0].innerHTML = " "
+      localStorage.clear();
       window.location.reload();
     })
-
-    
 
   }
   else{
@@ -571,6 +559,8 @@ potvrdaislanje.addEventListener("click", function(e){
 else{
   console.log('Ne mozete naruciti praznu korpu, dodajte elemente');
 }
+
+
 
 
 
