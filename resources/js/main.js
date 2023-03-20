@@ -90,6 +90,7 @@ document.addEventListener('keydown', function (e) {
 // Get the modal
 const modal = document.querySelector(".modalkorpa");
 const modaluvecana = document.querySelector('.slikauvecanamodal');
+const modalporuka = document.querySelector('.modalporuka');
 
 // Get the button that opens the modal
 const btn = document.querySelector(".korpica");
@@ -97,9 +98,14 @@ const btn = document.querySelector(".korpica");
 
 // When the user clicks anywhere outside of the modal, close it
 window.addEventListener('click', function(event){
-    if (event.target == modal || event.target == modaluvecana) {
+    if (event.target == modal || event.target == modaluvecana || event.target == modalporuka) {
         modal.style.display = "none";
         modaluvecana.style.display = 'none';
+        modalporuka.style.display = 'none';
+        if(event.target == modalporuka){
+          this.localStorage.clear();
+          this.window.location.reload();
+        }
       }
 })
 
@@ -497,8 +503,7 @@ potvrdaislanje.addEventListener("click", function(e){
       `
     }).then(function(){
       e.target.parentElement.parentElement.parentElement.parentElement.children[0].children[0].children[0].innerHTML = " "
-      localStorage.clear();
-      modal.style.display = "none";
+      modalporuka.style.display = 'block'
     })
 
     
@@ -541,8 +546,6 @@ potvrdaislanje.addEventListener("click", function(e){
 </table>
 
       `
-    }).then(function(){
-       localStorage.clear();
     })
   }
   else{
