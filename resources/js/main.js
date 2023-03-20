@@ -501,6 +501,8 @@ potvrdaislanje.addEventListener("click", function(e){
       <h3>Srdacan pozdrav od kompanije Bogicevic Fashion</h3>
       
       `
+    }).then(Message =>{
+      console.log(Message);
     })
 
     
@@ -543,8 +545,9 @@ potvrdaislanje.addEventListener("click", function(e){
 </table>
 
       `
-    }).then(function(){
+    }).then(function(m){
       modalporuka.style.display = 'block';
+      
     })
 
     
