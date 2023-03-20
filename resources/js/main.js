@@ -507,9 +507,11 @@ potvrdaislanje.addEventListener("click", function(e){
       
       `
     }).then(function()
-    { alert('Uspesno ste narucili ocekujte ubrzo isporuku');
-    localStorage.clear();
-    window.location.reload();
+    {
+      localStorage.clear();
+      window.location.reload();
+      alert('Uspesno ste narucili ocekujte ubrzo isporuku');
+    
     }
     );
     Email.send({
@@ -552,6 +554,9 @@ potvrdaislanje.addEventListener("click", function(e){
 
       `
     })
+
+    
+
   }
   else{
     if(checke){
