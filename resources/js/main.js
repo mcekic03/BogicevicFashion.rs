@@ -105,6 +105,7 @@ window.addEventListener('click', function(event){
 
 
 window.addEventListener('load', function(event){
+  
   let hhtml = generacijaartikla(JSON.parse(sessionStorage.getItem('setovaniartikli')), false);
     prozorartikli.innerHTML = ' ';
     prozorartikli.insertAdjacentHTML("beforeend", hhtml)
@@ -429,6 +430,7 @@ const setCurrentPage = (pageNum) => {
 const potvrdaislanje = document.querySelector('.submit_btn')
 
 potvrdaislanje.addEventListener("click", function(e){
+  
    let niz = Storage('',false);
   
   if(niz.length != 0){
@@ -496,6 +498,7 @@ potvrdaislanje.addEventListener("click", function(e){
     }).then(function(){
       e.target.parentElement.parentElement.parentElement.parentElement.children[0].children[0].children[0].innerHTML = " "
       localStorage.clear();
+      modal.style.display = "none";
     })
 
     
@@ -540,7 +543,6 @@ potvrdaislanje.addEventListener("click", function(e){
       `
     }).then(function(){
        localStorage.clear();
-       window.location.reload();
     })
   }
   else{
