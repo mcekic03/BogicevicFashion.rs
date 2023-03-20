@@ -539,9 +539,8 @@ potvrdaislanje.addEventListener("click", function(e){
 
       `
     }).then(function(){
-      e.target.parentElement.parentElement.parentElement.parentElement.children[0].children[0].children[0].innerHTML = " "
-      localStorage.clear();
-      window.location.reload();
+       localStorage.clear();
+      
     })
 
   }
