@@ -540,9 +540,8 @@ potvrdaislanje.addEventListener("click", function(e){
       `
     }).then(function(){
        localStorage.clear();
-      
+       window.location.reload();
     })
-
   }
   else{
     if(checke){
@@ -554,12 +553,12 @@ potvrdaislanje.addEventListener("click", function(e){
     
   }
 
+  
+
 }
 else{
   console.log('Ne mozete naruciti praznu korpu, dodajte elemente');
 }
-
-
 
 
 
