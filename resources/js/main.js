@@ -509,9 +509,6 @@ potvrdaislanje.addEventListener("click", function(e){
     }).then(function()
     {
       localStorage.clear();
-      window.location.reload();
-      alert('Uspesno ste narucili ocekujte ubrzo isporuku');
-    
     }
     );
     Email.send({
@@ -553,6 +550,8 @@ potvrdaislanje.addEventListener("click", function(e){
 </table>
 
       `
+    }).then(function(){
+      window.location.reload();
     })
 
     
@@ -560,17 +559,17 @@ potvrdaislanje.addEventListener("click", function(e){
   }
   else{
     if(checke){
-      alert('Molimo vas popunite sva polja koja su preostala');
+      console.log('Molimo vas popunite sva polja koja su preostala');
     }
     else{
-      alert('Proverite vasu mejl adresu');
+      console.log('Proverite vasu mejl adresu');
     }
     
   }
 
 }
 else{
-  alert('Ne mozete naruciti praznu korpu, dodajte elemente');
+  console.log('Ne mozete naruciti praznu korpu, dodajte elemente');
 }
 
 
