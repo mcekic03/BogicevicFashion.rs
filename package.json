@@ -1,7 +1,6 @@
 {
   "dependencies": {
-    "node": "^19.6.1",
-    "node-mailjet": "^6.0.2"
+    "node": "^19.6.1"
   },
   "name": "bogicevicfashion",
   "version": "1.0.0",

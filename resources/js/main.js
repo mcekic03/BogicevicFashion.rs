@@ -103,8 +103,8 @@ window.addEventListener('click', function(event){
         modaluvecana.style.display = 'none';
         modalporuka.style.display = 'none';
         if(event.target == modalporuka){
-          this.localStorage.clear();
-          this.window.location.reload();
+          localStorage.clear();
+          window.location.reload();
         }
       }
 })
@@ -501,9 +501,6 @@ potvrdaislanje.addEventListener("click", function(e){
       <h3>Srdacan pozdrav od kompanije Bogicevic Fashion</h3>
       
       `
-    }).then(function(){
-      e.target.parentElement.parentElement.parentElement.parentElement.children[0].children[0].children[0].innerHTML = " "
-      modalporuka.style.display = 'block'
     })
 
     
@@ -547,6 +544,10 @@ potvrdaislanje.addEventListener("click", function(e){
 
       `
     })
+
+    modalporuka.style.display = 'block';
+
+
   }
   else{
     if(checke){
