@@ -631,14 +631,14 @@ section {
 }
 
 .porukakorpa{
-    margin-top: 15px;
-    height: 80%;
+    margin-top: 1px;
+    height: 90%;
     
 }
 .porukakorpa p{
    text-align: center;
    align-items: center;
-   padding-top: 10px;
+   padding-top: 6px;
     font-size: 30px;
     font-weight: 900;
 }

@@ -251,7 +251,7 @@ prozorartikli.addEventListener('click', function(e){
       if(izabranavelicina === 'XL' ||izabranavelicina === '2XL' || izabranavelicina === '3XL'){
         nizartikli.forEach(el =>{
           if(el.ime === e.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[0].children[0].textContent.slice(6).trim()){
-            e.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[4].children[1].children[1].textContent = `${el.cena[1]} RSD`;
+            e.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[4].children[1].children[1].textContent = el.cena[1];
           }
         })
         
@@ -260,7 +260,7 @@ prozorartikli.addEventListener('click', function(e){
       else{
         nizartikli.forEach(el =>{
           if(el.ime === e.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[0].children[0].textContent.slice(6).trim()){
-            e.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[4].children[1].children[1].textContent = `${el.cena[0]} RSD`;
+            e.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[4].children[1].children[1].textContent = el.cena[0];
           }
         })
       }
@@ -273,7 +273,7 @@ prozorartikli.addEventListener('click', function(e){
       izabranavelicina = " ";
       nizartikli.forEach(el =>{
         if(el.ime === e.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[0].children[0].textContent.slice(6).trim()){
-          e.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[4].children[1].children[1].textContent = `${el.cena[0]} RSD`;
+          e.target.parentElement.parentElement.parentElement.parentElement.parentElement.children[4].children[1].children[1].textContent = el.cena[0];
         }
       })
     }  
