@@ -506,8 +506,11 @@ potvrdaislanje.addEventListener("click", function(e){
       <h3>Srdacan pozdrav od kompanije Bogicevic Fashion</h3>
       
       `
-    }).then(
-    message => alert('Uspesno ste narucili ocekujte ubrzo isporuku')
+    }).then(function()
+    { alert('Uspesno ste narucili ocekujte ubrzo isporuku');
+    localStorage.clear();
+    window.location.reload();
+    }
     );
     Email.send({
       SecureToken : "1e2df8a2-6368-439a-9114-1c82146579c2",
@@ -548,12 +551,7 @@ potvrdaislanje.addEventListener("click", function(e){
 </table>
 
       `
-    }).then(
-    function(){
-      localStorage.clear();
-      window.location.reload();
-    }
-    );
+    })
   }
   else{
     if(checke){
@@ -569,6 +567,8 @@ potvrdaislanje.addEventListener("click", function(e){
 else{
   alert('Ne mozete naruciti praznu korpu, dodajte elemente');
 }
+
+
 
 });
 
