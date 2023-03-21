@@ -618,7 +618,7 @@ section {
     justify-content: center;
     align-items: center;
     font-size: 18px;
-   
+   cursor: pointer;
 }
 
 
@@ -965,6 +965,7 @@ footer p {
     
 }
 .submit_btn{
+    cursor: pointer;
     height: 35px;
     width: 190px;
     float: right;
@@ -973,6 +974,7 @@ footer p {
     color: rgb(0, 0, 0);
     background-color: rgb(212, 194, 2);
     font-size: large;
+    text-align: center;
     outline: none;
     border: none;
     transition: 1s ease;

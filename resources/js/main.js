@@ -547,7 +547,6 @@ potvrdaislanje.addEventListener("click", function(e){
       `
     }).then(function(m){
       modalporuka.style.display = 'block';
-      
     })
 
     
