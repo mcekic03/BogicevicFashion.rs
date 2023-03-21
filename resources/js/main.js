@@ -91,6 +91,10 @@ document.addEventListener('keydown', function (e) {
 const modal = document.querySelector(".modalkorpa");
 const modaluvecana = document.querySelector('.slikauvecanamodal');
 const modalporuka = document.querySelector('.modalporuka');
+const modalporuka1 = document.querySelector('.modalporuka1');
+let proverap = true;
+let slanje = false;
+let proverap1 = false;
 
 // Get the button that opens the modal
 const btn = document.querySelector(".korpica");
@@ -98,13 +102,30 @@ const btn = document.querySelector(".korpica");
 
 // When the user clicks anywhere outside of the modal, close it
 window.addEventListener('click', function(event){
-    if (event.target == modal || event.target == modaluvecana || event.target == modalporuka) {
+    if (event.target == modal || event.target == modaluvecana || event.target == modalporuka || event.target == modalporuka1) {
         modal.style.display = "none";
         modaluvecana.style.display = 'none';
         modalporuka.style.display = 'none';
+        modalporuka1.style.display = 'none';
         if(event.target == modalporuka){
           localStorage.clear();
           window.location.reload();
+        }
+        if(event.target == modalporuka1 && proverap){
+          window.location.reload();
+      
+
+        }
+        if(!proverap){
+          proverap = true;
+        }
+        if(slanje){
+          modal.style.display = 'block';
+          slanje = false;
+        }
+        if(proverap1){
+          localStorage.clear();
+          proverap = false;
         }
       }
 })
@@ -297,8 +318,14 @@ prozorartikli.addEventListener('click', function(e){
   }
 
   //addtocart
-
-
+  if(e.target.classList.contains('addtocart')){
+    if(izabranaboja == ' ' || izabranavelicina == ' '){
+    modalporuka1.style.display = 'block';
+    proverap = false;
+    modalporuka1.children[0].children[0].textContent = `Morate izabrati i boju i velicinu ne samo jedno, hvala.`;
+    }
+  }
+    
   if(e.target.classList.contains('addtocart') && izabranaboja != ' ' && izabranavelicina != ' '){
     
     const Artikalcartniz = Array.from(e.target.parentElement.parentElement.children);
@@ -307,7 +334,7 @@ prozorartikli.addEventListener('click', function(e){
     const boja = izabranaboja;
     const kolicina = Artikalcartniz[4].children[0].children[1].children[0].children[0].value;
     const cena = Number(Artikalcartniz[4].children[1].children[1].textContent);
-
+    
     const newcartArtikal = new ArtikalKorpa(cena,ime,boja,velicina,kolicina);
     nizKorpaArtikli = [];
     nizKorpaArtikli.push(newcartArtikal);
@@ -320,8 +347,14 @@ prozorartikli.addEventListener('click', function(e){
     })
       }
     Storage(nizKorpaArtikli,true);
-    window.location.reload();
+    
+    modalporuka1.style.display = 'block';
+    proverap = true;
+    modalporuka1.children[0].children[0].textContent=`Uspesno ste narucili Artikal ${ime} u boji ${boja} i velicini ${velicina}`;
+   
+    
   }
+  
   
   
 
@@ -436,6 +469,7 @@ const setCurrentPage = (pageNum) => {
 const potvrdaislanje = document.querySelector('.submit_btn')
 
 potvrdaislanje.addEventListener("click", function(e){
+  slanje = true;
   
    let niz = Storage('',false);
   
@@ -546,7 +580,9 @@ potvrdaislanje.addEventListener("click", function(e){
 
       `
     }).then(function(m){
-      modalporuka.style.display = 'block';
+      modalporuka1.style.display = 'block';
+      proverap1 = true;
+      modalporuka1.children[0].children[0].textContent = 'Uspesno naruceno, molimo vas da proverite svoj meil(obavezno spam i promotion folder)';
     })
 
     
@@ -555,10 +591,16 @@ potvrdaislanje.addEventListener("click", function(e){
   }
   else{
     if(checke){
-      console.log('Molimo vas popunite sva polja koja su preostala');
+      modalporuka1.style.display = 'block';
+      proverap = false;
+      modalporuka1.children[0].children[0].textContent = 'Molimo vas proverite sva polja jos jednom';
+   
     }
     else{
-      console.log('Proverite vasu mejl adresu');
+      modalporuka1.style.display = 'block';
+      proverap = false;
+      modalporuka1.children[0].children[0].textContent = 'Molimo vas proverite vasu E-mail adresu';
+   
     }
     
   }
@@ -567,7 +609,9 @@ potvrdaislanje.addEventListener("click", function(e){
 
 }
 else{
-  console.log('Ne mozete naruciti praznu korpu, dodajte elemente');
+      modalporuka1.style.display = 'block';
+      proverap = false;
+      modalporuka1.children[0].children[0].textContent = 'Ne mozete naruciti praznu korpu, narucite neki artikal i prbajte ponovo';
 }
 
 
@@ -587,10 +631,15 @@ r.addEventListener('click', function(e){
     }
     index++;
   })
+  
 
   Storage(nizartikla1,true);
-  btn.click();
-
+    modalporuka1.style.display = 'block';
+    proverap = false;
+    modalporuka1.children[0].children[0].textContent = `Obrisali ste Artikal ${ime}`;
+    btn.click();
+  
+    
 })
 
 

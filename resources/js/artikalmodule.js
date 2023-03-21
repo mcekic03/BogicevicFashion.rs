@@ -9,7 +9,7 @@ const divovi = Array.from(divslike.children);
 
 function raspodela(p){
     podvrsta = [];
-    console.log(nizartikli);
+   
     nizartikli.forEach(el => {
        
         if(el.podvrsta === p){
