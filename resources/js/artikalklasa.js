@@ -116,9 +116,6 @@ nizartikli.push(artikal26);
 const artikal27 = new Artikal([1390],'Zazu U07',['black'],['1/2','3/4'],': Imitacija samostojećih sa okom koje namiguje, debljina 20/60den','Dekorativni unihop')
 nizartikli.push(artikal27);
 
-const artikal28 = new Artikal([1390],'Zazu U07',['black'],['1/2','3/4'],': Imitacija samostojećih sa okom koje namiguje, debljina 20/60den','Dekorativni unihop')
-nizartikli.push(artikal28);
-
 const artikal29 = new Artikal([1690],'Zazu T01',['black'],['1/2','3/4'],'Hulahopke s mustrom na prednjoj strani butina. Gornjih 20 den, donjih 60 den. Izrađena od mikrovlakana. Imaju ravni šav, mali pamučni umetak, udoban elastični pojas i nevidljivo pojačanje nožnih prstiju. Zalepljene usne ukrašene blistavim kamenčićima.','Dekorativni unihop')
 nizartikli.push(artikal29);
 
