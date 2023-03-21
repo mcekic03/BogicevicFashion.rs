@@ -64,6 +64,12 @@
 .grigio{
     background-color: #121312;
 }
+.pink{
+    background-color: pink;
+}
+.white{
+    background-color: white;
+}
 
 /* BASIC SETUP */
 
@@ -670,7 +676,7 @@ section {
 
 .plan-box div:last-child {
     text-align: center;
-    border: 0;
+    
 }
 
 
