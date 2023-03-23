@@ -360,6 +360,23 @@ header h1 span {
 .box p {
     font-size: 2rem;
     line-height: 2.9rem;
+    text-decoration: none;
+}
+
+.box a{
+    text-decoration: none;
+    color: gray;
+    font-size: 1.8rem;
+}
+
+.box a:hover{
+    
+    color: white;
+    font-size: 2.5rem;
+    background-color: black;
+    border-radius: 20px;
+    transition: 1s;
+    padding: 10px;
 }
 
 
@@ -868,7 +885,7 @@ footer {
     border: 0;
     transition: 2s;
     color: #888;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .footer-nav li a:active,
@@ -886,26 +903,50 @@ footer p {
 
 .instagram:hover,
 .instagram:active {
+    font-size: 3.5rem;
     color: #c32aa3;
     transition: 0.5s;
+    transform: rotate(30deg);
 }
 
 .facebook:hover,
 .facebook:active {
+    font-size: 3.5rem;
     color: #3b5998;
     transition: 0.5s;
+    transform: rotate(30deg);
 }
 
 .twitter:hover,
 .twitter:active {
+    font-size: 3.5rem;
     color: #1da1f2;
     transition: 0.5s;
+    transform: rotate(30deg);
 }
 
 .linkedin:hover,
 .linkedin:active {
+    font-size: 3.5rem;
     color: #007bb5;
     transition: 0.5s;
+    transform: rotate(30deg);
+}
+
+.gmail:hover,
+.gmail:active {
+    font-size: 3.5rem;
+    color: #ff0000;
+    transition: 0.5s;
+    transform: rotate(30deg);
+}
+
+.tiktok:hover,
+.tiktok:active {
+    font-size: 3.5rem;
+    color: #000000;
+    transition: 0.5s;
+    transform: rotate(30deg);
 }
 
 

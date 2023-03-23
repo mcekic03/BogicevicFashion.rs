@@ -13,6 +13,6 @@
     "start": "parcel index.html",
     "build": "parcel build index.html"
   },
-  "author": "Michael Cekic-C developmant-",
+  "author": "Michael Cekic UPDATE Native",
   "license": "ISC"
 }
