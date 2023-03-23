@@ -1,7 +1,5 @@
 'use strict';
 export let nizartikli = [];
-
-
 export class Artikal{
     constructor(cena,ime,boja,velicina,opis,podvrsta){
 
@@ -17,7 +15,6 @@ export class Artikal{
     }
 
 }
-
 export class ArtikalKorpa{
     constructor(cena,ime,boja,velicina,kolicina){
 
@@ -29,10 +26,6 @@ export class ArtikalKorpa{
     }
 
 }
-
-
-
-
 const artikal1 = new Artikal([650],'Riviera 7',['playa','nero','visone'],['S','M','L'],'Unihop 7 dena providan sa blagim sjajem bez ojacanja na prstima . SASTAV: 84% poliamid 16% elastan.','Unihop & push up')
 nizartikli.push(artikal1);
 

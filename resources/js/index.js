@@ -8,11 +8,9 @@ window.addEventListener('click', function(e){
       
       }
 });
-
 const instagram = document.querySelector('.instagramlink');
 const facebook = document.querySelector('.facebooklink');
 const twiter = document.querySelector('.twiterlink');
-
 instagram.addEventListener('click', function(e){
   window.open('https://www.google.com')
 });
@@ -36,11 +34,8 @@ window.addEventListener('click', function(e){
   
 
 });
-
-
 const slike = document.querySelector('.galerija').children
 let index = 0;
-
 function slideshow(){
   if(index !=0){
     slike[index-1].classList.add('hidden');

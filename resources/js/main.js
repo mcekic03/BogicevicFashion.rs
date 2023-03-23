@@ -7,16 +7,11 @@ import {Email} from './smtp.js'
 import {generacijaartikla} from './artikalmodule.js'
 import {KorpaView} from './artikalmodule.js';
 import {Tablemeil} from './artikalmodule.js';
-
-
-
-
 let nizKorpaArtikli = [];
 let html = ' ';
 const prozorartikli = document.querySelector(".prikazartikla");
 const brojpronadjenih = document.querySelector('.broj-pronadjenih');
 const porukastart = document.querySelector('.porukastart');
-
 let Storage = function(artiklikorpica, getset){
 
 
@@ -29,20 +24,13 @@ let Storage = function(artiklikorpica, getset){
   }
   
 }
-
 let search1 = document.querySelector('.search-box').children[0].value;
-
-
-//search element
-
 const searchBox = document.querySelectorAll('.search-box input[type="text"] + span');
-
 searchBox.forEach(elm => {
   elm.addEventListener('click', () => {
     elm.previousElementSibling.value = '';
   });
 });
-
 document.addEventListener('keydown', function (e) {
   let search = document.querySelector('.search-box').children[0].value;
   search = search.charAt(0).toUpperCase() + search.slice(1);
@@ -90,7 +78,6 @@ document.addEventListener('keydown', function (e) {
     
 
 }, false);
-// Get the modal
 const modal = document.querySelector(".modalkorpa");
 const modaluvecana = document.querySelector('.slikauvecanamodal');
 const modalporuka = document.querySelector('.modalporuka');
@@ -98,12 +85,7 @@ const modalporuka1 = document.querySelector('.modalporuka1');
 let proverap = true;
 let slanje = false;
 let proverap1 = false;
-
-// Get the button that opens the modal
 const btn = document.querySelector(".korpica");
-
-
-// When the user clicks anywhere outside of the modal, close it
 window.addEventListener('click', function(event){
     if (event.target == modal || event.target == modaluvecana || event.target == modalporuka || event.target == modalporuka1) {
         modal.style.display = "none";
@@ -134,7 +116,6 @@ window.addEventListener('click', function(event){
 
 
 })
-
 window.addEventListener('load', function(event){
   
   let hhtml = generacijaartikla(JSON.parse(sessionStorage.getItem('setovaniartikli')), false);
@@ -163,8 +144,7 @@ window.addEventListener('load', function(event){
   }
 
 
-  });
-
+});
 if(JSON.parse(localStorage.getItem('homepodvrsta')))
 {
   let stringic = JSON.parse(localStorage.getItem('homepodvrsta'))
@@ -213,7 +193,6 @@ if(JSON.parse(localStorage.getItem('homepodvrsta')))
   }
   sessionStorage.setItem('setovaniartikli', JSON.stringify(stringic));
 }
-
 window.addEventListener('click', function(e){
  
   if(e.target.classList.contains('linkstrana')){
@@ -267,10 +246,8 @@ window.addEventListener('click', function(e){
   }
 
 })
-
 let izabranaboja = ' ';
 let izabranavelicina = ' ';
-
 prozorartikli.addEventListener('click', function(e){
   
   
@@ -392,9 +369,6 @@ prozorartikli.addEventListener('click', function(e){
 
 
 })
-
-
-
 btn.addEventListener('click', function(){
   modal.style.display = "block";
   let gotovhtml = KorpaView(Storage(' ',false));
@@ -438,13 +412,11 @@ btn.addEventListener('click', function(){
 
   paginationNumbers.appendChild(pageNumber);
 };
-
 const getPaginationNumbers = () => {
   for (let i = 1; i <= pageCount; i++) {
     appendPageNumber(i);
   }
 };
-
 const handleActivePageNumber = () => {
   document.querySelectorAll(".pagination-number").forEach((button) => {
     button.classList.remove("active");
@@ -469,11 +441,8 @@ const setCurrentPage = (pageNum) => {
     }
   });
 };
-
-
   getPaginationNumbers();
   setCurrentPage(1);
-
   document.querySelectorAll(".pagination-number").forEach((button) => {
     const pageIndex = Number(button.getAttribute("page-index"));
 
@@ -483,11 +452,7 @@ const setCurrentPage = (pageNum) => {
       });
     }
   });
-
-
-
 }) 
-
 const brzaposta = document.querySelector("#brzaposta");
 brzaposta.addEventListener("click", (e) => {
   let cena = 0;
@@ -497,9 +462,7 @@ brzaposta.addEventListener("click", (e) => {
   const c = document.querySelector('.cenapostarina');
   c.textContent = cena.toString();
 });
-
 const potvrdaislanje = document.querySelector('.submit_btn')
-
 potvrdaislanje.addEventListener("click", function(e){
   slanje = true;
   
@@ -648,9 +611,7 @@ else{
 
 
 });
-
 const r = document.querySelector('.resultKorpa');
-
 r.addEventListener('click', function(e){
   let domArtikal = e.target.parentElement;
   let ime = e.target.parentElement.children[0].textContent.slice(7).trim();

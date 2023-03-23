@@ -4,9 +4,6 @@ import {ArtikalKorpa, nizartikli} from './artikalklasa.js'
 let podvrsta =[];
 const divslike = document.querySelector('.divslikesrc')
 const divovi = Array.from(divslike.children);
-
- 
-
 function raspodela(p){
     podvrsta = [];
    
@@ -22,7 +19,6 @@ function raspodela(p){
      
     
 }
-
 export function generacijaartikla(pod,pretraga=false){
     let gotovhtml = ' ';
     let artikli = [];
@@ -151,7 +147,6 @@ export function generacijaartikla(pod,pretraga=false){
     return gotovhtml;
 
 }
-
 export function KorpaView(NizKorpaArtikli){
     let gotovhtml = ' ';
 
@@ -188,7 +183,6 @@ export function KorpaView(NizKorpaArtikli){
 
 
 }
-
 export function Tablemeil(NizKorpaArtikli){
     let gotovhtml = ' ';
 
