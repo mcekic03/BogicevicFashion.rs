@@ -375,6 +375,22 @@ header h1 span {
     width: auto;
 }
 
+.galerija{
+    
+    height: 500px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 20px;
+   
+}
+
+.galerija img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+
 
 
 .kontaktmreze{
@@ -1177,3 +1193,4 @@ footer p {
     width: 100%;
 }
  }
+

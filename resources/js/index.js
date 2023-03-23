@@ -36,7 +36,29 @@ window.addEventListener('click', function(e){
   
 
 });
-  
-  
+
+
+const slike = document.querySelector('.galerija').children
+let index = 0;
+
+function slideshow(){
+  if(index !=0){
+    slike[index-1].classList.add('hidden');
+  }
+  else{
+    slike[slike.length-1].classList.add('hidden');
+  }
+
+  slike[index].classList.remove('hidden');
+  if (index == slike.length-1) {
+    index = 0;
+    
+  } else {
+    index++;
+  }
+
+  setTimeout(slideshow, 2000);
+}
+window.onload = slideshow();
     
   
