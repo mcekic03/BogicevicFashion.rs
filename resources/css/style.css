@@ -364,10 +364,18 @@ header h1 span {
 
 
 
-.aboutus p {
-    font-size: 2.8rem;
+
+.tekstonama{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    font-size: 3rem;
     line-height: 2.9rem;
+    width: auto;
 }
+
+
 
 .kontaktmreze{
     display: flex;
@@ -456,6 +464,33 @@ header h1 span {
     transform: scale(1.03);
     opacity: 1;
 }
+
+.overlay {
+    position:absolute;
+    height: 40px;
+    width: 250px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #00000099;
+    z-index: 5;
+    border-radius: 10px;
+  }
+  
+  .meals-showcase li figure:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 
 
 /*search ----------------------------------------------------------------*/

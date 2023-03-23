@@ -30,6 +30,9 @@ let Storage = function(artiklikorpica, getset){
   
 }
 
+let search1 = document.querySelector('.search-box').children[0].value;
+
+
 //search element
 
 const searchBox = document.querySelectorAll('.search-box input[type="text"] + span');
@@ -128,8 +131,9 @@ window.addEventListener('click', function(event){
           proverap = false;
         }
       }
-})
 
+
+})
 
 window.addEventListener('load', function(event){
   
@@ -137,7 +141,29 @@ window.addEventListener('load', function(event){
     prozorartikli.innerHTML = ' ';
     prozorartikli.insertAdjacentHTML("beforeend", hhtml)
     brojpronadjenih.parentElement.textContent = `Prikazani su artikli iz kategoriije ${JSON.parse(sessionStorage.getItem('setovaniartikli'))}`;
-});
+
+  
+  if(JSON.parse(sessionStorage.getItem('brzapretraga')).length > 0){
+    let data = JSON.parse(sessionStorage.getItem('brzapretraga'));
+    let newSearchNiz =[];
+    console.log(data);
+   
+    nizartikli.forEach(el => {
+      if(el.ime.trim() == data.trim()){
+        newSearchNiz.push(el);
+      }
+      
+    })
+    
+    const gotovhtml = generacijaartikla(newSearchNiz,true);
+    prozorartikli.innerHTML = ' ';
+    prozorartikli.insertAdjacentHTML("beforeend", gotovhtml);
+    sessionStorage.removeItem('brzapretraga');
+
+  }
+
+
+  });
 
 if(JSON.parse(localStorage.getItem('homepodvrsta')))
 {
@@ -241,10 +267,6 @@ window.addEventListener('click', function(e){
   }
 
 })
-
-
-
-
 
 let izabranaboja = ' ';
 let izabranavelicina = ' ';

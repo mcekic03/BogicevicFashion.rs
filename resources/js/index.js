@@ -22,7 +22,20 @@ facebook.addEventListener('click', function(e){
 twiter.addEventListener('click', function(e){
   window.open('https://www.google.com')
 });
+  const linkstrana = document.querySelector('.linkstrana');
+window.addEventListener('click', function(e){
+ 
   
+
+  if(e.target.parentElement.classList.contains('s')){
+    let brzapretraga = e.target.parentElement.children[0].children[0].textContent.trim()
+    sessionStorage.removeItem('brzapretraga');
+    sessionStorage.setItem('brzapretraga',  JSON.stringify(brzapretraga));
+    linkstrana.click();
+  }
+  
+
+});
   
   
     
