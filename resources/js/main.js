@@ -488,6 +488,16 @@ const setCurrentPage = (pageNum) => {
 
 }) 
 
+const brzaposta = document.querySelector("#brzaposta");
+brzaposta.addEventListener("click", (e) => {
+  let cena = 0;
+  if(e.target.selectedIndex != 0){
+    cena = e.target.options[e.target.selectedIndex].value
+  }
+  const c = document.querySelector('.cenapostarina');
+  c.textContent = cena.toString();
+});
+
 const potvrdaislanje = document.querySelector('.submit_btn')
 
 potvrdaislanje.addEventListener("click", function(e){
@@ -508,9 +518,10 @@ potvrdaislanje.addEventListener("click", function(e){
   const nacinslanja = e.target.parentElement.parentElement.children[6].children[1].options[e.target.parentElement.parentElement.children[6].children[1].selectedIndex].textContent;
   const grad = e.target.parentElement.parentElement.children[9].children[0].value;
   const ulicaibroj = e.target.parentElement.parentElement.children[9].children[1].value;
-  const ukupnozaplacanje = Number(e.target.parentElement.parentElement.children[13].children[0].children[0].textContent);
- 
+  let ukupnozaplacanje = Number(e.target.parentElement.parentElement.children[13].children[0].children[0].textContent);
+  const postarina = Number(e.target.parentElement.parentElement.children[6].children[1].options[e.target.parentElement.parentElement.children[6].children[1].selectedIndex].value);
   const emailcheck = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  ukupnozaplacanje += postarina
   let checke = false;
   if(mejl.match(emailcheck)){
     checke = true;
@@ -583,7 +594,7 @@ potvrdaislanje.addEventListener("click", function(e){
       <h4  style="margin:auto">Ulica i broj: ${ulicaibroj}</h4>
       <h4  style="margin:auto">Brza posta: ${nacinslanja}</h4>
       <p  style="margin:auto">----------------------------------------------------------------</p>
-      <h2>Suma koju trebate  naplatiti je: ${ukupnozaplacanje}</h2>
+      <h2>Suma koju trebate  naplatiti je: ${ukupnozaplacanje-postarina}</h2>
       <p  style="margin:auto">----------------------------------------------------------------</p>
       <br></br>
       <h4  style="margin:auto">Artikli za pakovanje</h4>
@@ -604,10 +615,8 @@ potvrdaislanje.addEventListener("click", function(e){
     }).then(function(m){
       modalporuka1.style.display = 'block';
       proverap1 = true;
-      modalporuka1.children[0].children[0].textContent = 'Uspesno naruceno, molimo vas da proverite svoj meil(obavezno spam i promotion folder)';
+      modalporuka1.children[0].children[0].textContent = `Uspesno naruceno, molimo vas da proverite svoj meil(obavezno spam i promotion folder) Ukupna cena sa postarinom iznosi ${ukupnozaplacanje}`;
     })
-
-    
 
 
   }
