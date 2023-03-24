@@ -530,8 +530,9 @@ header h1 span {
 /*search ----------------------------------------------------------------*/
 
 .searchK {
-    padding-left: 40px;
-    
+    width: 100px;
+    margin: auto;
+    margin-left: 43%
     
 }
 
