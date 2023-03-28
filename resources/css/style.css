@@ -556,8 +556,7 @@ header h1 span {
 /*search ----------------------------------------------------------------*/
 
 .searchK {
-    width: 100px;
-    margin: auto;
+    width: 100%;
     margin-left: 43%
 }
 
