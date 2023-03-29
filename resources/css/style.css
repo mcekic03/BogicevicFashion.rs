@@ -234,6 +234,7 @@ header h1 span {
     float: right;
     margin-top: 5rem;
     list-style: none;
+    
   
 }
 .main-navfixed{
@@ -242,11 +243,12 @@ header h1 span {
     background: linear-gradient(to right, #b62c2c 15%, #e0d90a);;
     padding: 30px;
     border-radius: 10px;
-    width: 100%;
     text-align: center;
     margin-top: 0;
     z-index: 1000;
+    width: 1200px;
 }
+
 
 .main-nav li {
     display: inline-block;

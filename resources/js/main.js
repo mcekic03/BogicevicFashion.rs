@@ -80,7 +80,7 @@ document.addEventListener('keydown', function (e) {
 }, false);
 const top = document.querySelector('#button');
 const header = document.querySelector('#header');
-const nav = document.querySelector('.main-navfixed');
+const nav = document.querySelector('.main-nav');
 top.addEventListener('click',function(e){
 
   header.scrollIntoView({behavior: 'smooth'});
@@ -89,11 +89,11 @@ top.addEventListener('click',function(e){
 window.addEventListener('scroll',function(){
   if(window.pageYOffset >750){
     top.style.opacity = '1';
-    nav.classList.remove('hidden')
+    nav.classList.add('main-navfixed')
   }
   else{
     top.style.opacity = '0';
-    nav.classList.add('hidden')
+    nav.classList.remove('main-navfixed')
   }
 });
 const modal = document.querySelector(".modalkorpa");
