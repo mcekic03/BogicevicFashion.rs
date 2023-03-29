@@ -122,7 +122,7 @@ export function generacijaartikla(pod,pretraga=false){
                    
                 </div>
                 <div>
-                    <p class="btn btn-outline addtocart">ADD TO CART</p>">
+                    <p class="btn btn-outline addtocart">DODAJ U KORPU</p>">
                 </div>
             
        
