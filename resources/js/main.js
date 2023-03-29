@@ -80,6 +80,7 @@ document.addEventListener('keydown', function (e) {
 }, false);
 const top = document.querySelector('#button');
 const header = document.querySelector('#header');
+const nav = document.querySelector('.main-navfixed');
 top.addEventListener('click',function(e){
 
   header.scrollIntoView({behavior: 'smooth'});
@@ -88,9 +89,11 @@ top.addEventListener('click',function(e){
 window.addEventListener('scroll',function(){
   if(window.pageYOffset >750){
     top.style.opacity = '1';
+    nav.classList.remove('hidden')
   }
   else{
     top.style.opacity = '0';
+    nav.classList.add('hidden')
   }
 });
 const modal = document.querySelector(".modalkorpa");

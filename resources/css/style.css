@@ -234,6 +234,18 @@ header h1 span {
     float: right;
     margin-top: 5rem;
     list-style: none;
+  
+}
+.main-navfixed{
+    float: none;
+    position: fixed;
+    background: linear-gradient(to right, #b62c2c 15%, #e0d90a);;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    z-index: 1000;
 }
 
 .main-nav li {
@@ -664,9 +676,9 @@ section {
     border-radius: 40px;
     position: fixed;
     bottom: 50px;
-    right: 50px;
+    right: 10%;
     transition: background-color .3s;
-
+    opacity: 0;
     z-index: 1000;
 }
 #button{
@@ -1403,7 +1415,12 @@ footer p {
     .d-none{
         display: none;
     }
-
+    #button{
+        width:200px;
+        height: 70px;
+        font-size: 25px;
+        right: 5%;
+    }
     .modalkorpa .kontent{
         width: 100%;
     }
