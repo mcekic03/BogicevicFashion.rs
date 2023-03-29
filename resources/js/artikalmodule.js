@@ -14,7 +14,6 @@ function raspodela(p){
         }
        
     })
-    console.log(podvrsta);
     return podvrsta;
      
     

@@ -78,6 +78,21 @@ document.addEventListener('keydown', function (e) {
     
 
 }, false);
+const top = document.querySelector('#button');
+const header = document.querySelector('#header');
+top.addEventListener('click',function(e){
+
+  header.scrollIntoView({behavior: 'smooth'});
+
+});
+window.addEventListener('scroll',function(){
+  if(window.pageYOffset >750){
+    top.style.opacity = '1';
+  }
+  else{
+    top.style.opacity = '0';
+  }
+});
 const modal = document.querySelector(".modalkorpa");
 const modaluvecana = document.querySelector('.slikauvecanamodal');
 const modalporuka = document.querySelector('.modalporuka');
