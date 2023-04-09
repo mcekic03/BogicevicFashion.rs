@@ -1463,4 +1463,7 @@ footer p {
     .porukakorpa p {
         font-size: 29px;
     }
+    header {
+        height: 60vh;
+    }
 }
