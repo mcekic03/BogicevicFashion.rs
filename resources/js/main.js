@@ -7,6 +7,14 @@ import {Email} from './smtp.js'
 import {generacijaartikla} from './artikalmodule.js'
 import {KorpaView} from './artikalmodule.js';
 import {Tablemeil} from './artikalmodule.js';
+
+const godina = document.querySelector('.yeardinamic');
+const getsetYear = function(){
+  const d = new Date();
+  godina.textContent = d.getFullYear();
+}
+getsetYear();
+
 let nizKorpaArtikli = [];
 let html = ' ';
 const prozorartikli = document.querySelector(".prikazartikla");

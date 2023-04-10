@@ -1,4 +1,5 @@
 'use strict';
+
 localStorage.removeItem('homepodvrsta');
 window.addEventListener('click', function(e){
  
@@ -8,6 +9,12 @@ window.addEventListener('click', function(e){
       
       }
 });
+const godina = document.querySelector('.yeardinamic');
+const getsetYear = function(){
+  const d = new Date();
+  godina.textContent = d.getFullYear();
+}
+getsetYear();
 const instagram = document.querySelector('.instagramlink');
 const facebook = document.querySelector('.facebooklink');
 const twiter = document.querySelector('.twiterlink');
