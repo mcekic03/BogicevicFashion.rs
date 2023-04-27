@@ -253,37 +253,37 @@ nizartikli.push(artikal77);
 const artikal78 = new Artikal([1390],'Cherry Jet',['black'],['1/2','3/4'],'Komplet carape i halter sa cirkonima.','Carape za halter')
 nizartikli.push(artikal78);
 
-const artikal79 = new Artikal([2290,2290],'C-407',['black'],['S','M','L','XL'],'Ekskluzivni zenski ves komplet korset-gacice','Zenski ves')
+const artikal79 = new Artikal([2290,2290],'C-407',['black'],['S','M','L/XL'],'Ekskluzivni zenski ves komplet korset-gacice','Zenski ves')
 nizartikli.push(artikal79);
 
-const artikal80 = new Artikal([1490,1490],'B-204',['black'],['S','M','L','XL'],'Ekskluzivni ves cipkasti bodi','Zenski ves')
+const artikal80 = new Artikal([1490,1490],'B-204',['black'],['S','M','L/XL'],'Ekskluzivni ves cipkasti bodi','Zenski ves')
 nizartikli.push(artikal80);
 
-const artikal80c = new Artikal([1490,1490],'B-206',['black'],['S','M','L','XL'],'Ekskluzivan zenski bodi sa trakama ','Zenski ves')
+const artikal80c = new Artikal([1490,1490],'B-206',['black'],['S','M','L/XL'],'Ekskluzivan zenski bodi sa trakama ','Zenski ves')
 nizartikli.push(artikal80c);
 
-const artikal81 = new Artikal([1490,1490],'B-209',['black'],['S','M','L','XL'],'Zenska ves spavacica kratka prozirna','Zenski ves')
+const artikal81 = new Artikal([1490,1490],'B-209',['black'],['S/M','L','XL'],'Zenska ves spavacica kratka prozirna','Zenski ves')
 nizartikli.push(artikal81);
 
-const artikal82 = new Artikal([1490,1490],'B-216',['pink'],['S','M','L','XL'],'Ekskluzivan roze bodi sa crnim trakama','Zenski ves')
+const artikal82 = new Artikal([1490,1490],'B-216',['pink'],['S','M','L/XL'],'Ekskluzivan roze bodi sa crnim trakama','Zenski ves')
 nizartikli.push(artikal82);
 
-const artikal83 = new Artikal([1490,1490],'B-218',['gray'],['S','M','L','XL'],'Ekskluzivni ves cipkasti bodi ','Zenski ves')
+const artikal83 = new Artikal([1490,1490],'B-218',['gray'],['S','M','L/XL','2XL'],'Ekskluzivni ves cipkasti bodi ','Zenski ves')
 nizartikli.push(artikal83);
 
-const artikal84 = new Artikal([1490,1490],'V-506',['white'],['S','M','L','XL'],'Bela zenska spavacica sa halterima i krznom oko vrata','Zenski ves')
+const artikal84 = new Artikal([1490,1490],'V-506',['white'],['S/M','L/XL'],'Bela zenska spavacica sa halterima i krznom oko vrata','Zenski ves')
 nizartikli.push(artikal84);
 
-const artikal85 = new Artikal([1490,1490],'D-302',['black'],['S','M','L','XL'],'Zenska spavacica sa jednom bratelom','Zenski ves')
+const artikal85 = new Artikal([1490,1490],'D-302',['black'],['S/M','L','XL'],'Zenska spavacica sa jednom bratelom','Zenski ves')
 nizartikli.push(artikal85);
 
-const artikal86 = new Artikal([3720,3720],'U-815',['black'],['S','M','L','XL'],'Zenska ves dugacka spavacica prozirna sa plavim vezom na brushalteru','Zenski ves')
+const artikal86 = new Artikal([3720,3720],'U-815',['black'],['S/M','L/XL'],'Zenska ves dugacka spavacica prozirna sa plavim vezom na brushalteru','Zenski ves')
 nizartikli.push(artikal86);
 
-const artikal87 = new Artikal([3990,3990],'U-816',['black'],['S','M','L','XL'],'Zenska ves kraca spavacica prozirna sa plavim vezom na brushalteru','Zenski ves')
+const artikal87 = new Artikal([3990,3990],'U-816',['black'],['S/M','L','XL'],'Zenska ves kraca spavacica prozirna sa plavim vezom na brushalteru','Zenski ves')
 nizartikli.push(artikal87);
 
-const artikal88 = new Artikal([1490,1490],'U-818',['black'],['S','M','L','XL'],'Kraca crna spavacica sa ukrstenim trakama i cipkom pri dnu','Zenski ves')
+const artikal88 = new Artikal([1490,1490],'U-818',['black'],['S/M','L','XL'],'Kraca crna spavacica sa ukrstenim trakama i cipkom pri dnu','Zenski ves')
 nizartikli.push(artikal88);
 
 const artikal89 = new Artikal([1190],'Brus na lepljenje',['black','natural'],['A','B','C','D'],'Zenski brus bez bratele i bez zadnjeg kopcanja sa unutrasnje strane je oblozen silikonom.','Zenski ves')
