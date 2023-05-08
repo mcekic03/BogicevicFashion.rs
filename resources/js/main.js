@@ -373,11 +373,10 @@ prozorartikli.addEventListener('click', function(e){
       }
     Storage(nizKorpaArtikli,true);
     
-    modalporuka1.style.display = 'block';
+    //modalporuka1.style.display = 'block';
     proverap = true;
-    modalporuka1.children[0].children[0].textContent=`Uspesno ste narucili Artikal ${ime} u boji ${boja} i velicini ${velicina}`;
-   
-    
+    //modalporuka1.children[0].children[0].textContent=`Uspesno ste narucili Artikal ${ime} u boji ${boja} i velicini ${velicina}`;
+    btn.click();
   }
   
   
