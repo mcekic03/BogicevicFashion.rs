@@ -603,7 +603,7 @@ potvrdaislanje.addEventListener("click", function(e){
     }).then(function(m){
       modalporuka1.style.display = 'block';
       proverap1 = true;
-      modalporuka1.children[0].children[0].textContent = `Uspesno naruceno, molimo vas da proverite svoj meil(obavezno spam i promotion folder) Ukupna cena sa postarinom iznosi ${ukupnozaplacanje}`;
+      modalporuka1.children[0].children[0].textContent = `Uspesno naruceno, molimo vas da proverite svoj meil(obavezno spam(Nepozeljno) i promotion(Promocije) folder) Ukupna cena sa postarinom iznosi ${ukupnozaplacanje}`;
     })
 
 
