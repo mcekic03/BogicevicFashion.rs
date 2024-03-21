@@ -525,51 +525,13 @@ potvrdaislanje.addEventListener("click", function(e){
    
     let artiklitable = Tablemeil(Storage('',false));
    
-    
-    
-    Email.send({
-      SecureToken : "5ce9df62-a18e-4005-9453-6add877ce7d6",
-      To : `${mejl.trim()}`,
-      From : "porudzbenice.bogicevic@gmail.com",
-      Subject : "Porudzbina sa sajta Bogicevic Fashion",
-      Body : `
-      
-      <h1>Porudzbenica</h1>
-      <h2>Zdravo ${ime} ${prezime}, Hvala vam sto koristite nas sajt i nadamo se da cete nam se vratiti</h2>
-      <br></br>
-      <br></br>
-      <h3>Detalji porudzbine</h3>
-      <h2>Suma koju trebate spremiti kada dodje kurir je: ${ukupnozaplacanje}</h2>
-      <br></br>
-      <table style="width:70%;margin:auto;text-align:center;border:1px solid black">
-  <tr style="border:1px solid black">
-    <th style="border:1px solid black">Naziv Artikla</th>
-    <th style="border:1px solid black">Cena</th>
-    <th style="border:1px solid black">Velicina</th>
-    <th style="border:1px solid black">Boja</th>
-    <th style="border:1px solid black">Kolicina</th>
-  </tr>
-  
-  ${artiklitable}
- 
-</table>
-
-      <h3>Srdacan pozdrav od kompanije Bogicevic Fashion</h3>
-      
-      `,
-      Attachments : [
-        {
-          name : "smtpjs.png",
-          path : "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
-        }]
-    }).then(Message =>{
-      console.log(Message);
-    })
 
     Email.send({
-      SecureToken : "5ce9df62-a18e-4005-9453-6add877ce7d6",
-      To : `porudzbenice.bogicevic@gmail.com`,
-      From : "porudzbenice.bogicevic@gmail.com",
+      Host : "smtp.elasticemail.com",
+      Username : "bogicevicfashion@yahoo.com",
+      Password : "B4833BD71B39C83B97C8D7B6DCFF4C1F73D0",
+      To : "bogicevic2024@outlook.com",
+      From : "bogicevic2024@outlook.com",
       Subject : "Porudzbina sa sajta Bogicevic Fashion",
       Body : `
       
@@ -611,6 +573,7 @@ potvrdaislanje.addEventListener("click", function(e){
           path : "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
         }]
     }).then(function(m){
+      alert(m)
       modalporuka1.style.display = 'block';
       proverap1 = true;
       modalporuka1.children[0].children[0].textContent = `Uspesno naruceno, molimo vas da proverite svoj meil(obavezno spam(Nepozeljno) i promotion(Promocije) folder) Ukupna cena sa postarinom iznosi ${ukupnozaplacanje}`;
