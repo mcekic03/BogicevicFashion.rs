@@ -3,7 +3,8 @@
 import {Artikal} from './artikalklasa.js'
 import { nizartikli } from './artikalklasa.js';
 import { ArtikalKorpa } from './artikalklasa.js';
-import {Email} from './smtp.js'
+/* SmtpJS.com - v3.0.0 */
+let Email = { send: function (a) { return new Promise(function (n, e) { a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send"; var t = JSON.stringify(a); Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) { n(e) }) }) }, ajaxPost: function (e, n, t) { var a = Email.createCORSRequest("POST", e); a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () { var e = a.responseText; null != t && t(e) }, a.send(n) }, ajax: function (e, n) { var t = Email.createCORSRequest("GET", e); t.onload = function () { var e = t.responseText; null != n && n(e) }, t.send() }, createCORSRequest: function (e, n) { var t = new XMLHttpRequest; return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t } };
 import {generacijaartikla} from './artikalmodule.js'
 import {KorpaView} from './artikalmodule.js';
 import {Tablemeil} from './artikalmodule.js';
@@ -527,7 +528,7 @@ potvrdaislanje.addEventListener("click", function(e){
     
     
     Email.send({
-      SecureToken : "1e2df8a2-6368-439a-9114-1c82146579c2",
+      SecureToken : "5ce9df62-a18e-4005-9453-6add877ce7d6",
       To : `${mejl.trim()}`,
       From : "porudzbenice.bogicevic@gmail.com",
       Subject : "Porudzbina sa sajta Bogicevic Fashion",
@@ -555,14 +556,18 @@ potvrdaislanje.addEventListener("click", function(e){
 
       <h3>Srdacan pozdrav od kompanije Bogicevic Fashion</h3>
       
-      `
+      `,
+      Attachments : [
+        {
+          name : "smtpjs.png",
+          path : "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
+        }]
     }).then(Message =>{
       console.log(Message);
     })
 
-    
     Email.send({
-      SecureToken : "1e2df8a2-6368-439a-9114-1c82146579c2",
+      SecureToken : "5ce9df62-a18e-4005-9453-6add877ce7d6",
       To : `porudzbenice.bogicevic@gmail.com`,
       From : "porudzbenice.bogicevic@gmail.com",
       Subject : "Porudzbina sa sajta Bogicevic Fashion",
@@ -599,7 +604,12 @@ potvrdaislanje.addEventListener("click", function(e){
  
 </table>
 
-      `
+      `,
+      Attachments : [
+        {
+          name : "smtpjs.png",
+          path : "https://networkprogramming.files.wordpress.com/2017/11/smtpjs.png"
+        }]
     }).then(function(m){
       modalporuka1.style.display = 'block';
       proverap1 = true;
