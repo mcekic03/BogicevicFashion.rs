@@ -322,6 +322,58 @@ nizartikli.push(artikal99);
 const artikal100 = new Artikal([420,420],'G3',['black','natural','red','white'],['L','XL','2XL','3XL'],'Zenske besavne gace','Zenski ves')
 nizartikli.push(artikal100);
 
+const artikal101 = new Artikal([560],'Gel vostane trake',['neutral'],['no'],`Gel voštane trake za telos a ektraktom grejpfruta I bambusa,Linija kreirana za svaki tip kože, posebno za one osetljive. Uz inovativnu gel
+formulu za lako i brzo uklanjanje neželjene dlake. Formula je obogaćena ekstraktima grejpfruta i
+bambusa, poznatih po svojim jakim antioksidativnim svojstvima. Nežna nega, ostavljajući vašu
+kožu svilenkastom glatkom i hidriranom.
+U pogodnoj udobnoj veličini za brzu depilaciju većih površina tela. Nakon redovne upotrebe,
+dlaka postaje mekša i finija.`,'Kozmetika')
+nizartikli.push(artikal101);
+
+const artikal102 = new Artikal([500],'Gel vostane trake',['neutral'],['no'],`Gel voštane trake za bikini zonu sa ekstraktom grejpfruta I bambusa,Linija kreirana za svaki tip kože, posebno za one osetljive. Uz inovativnu gel formulu za lako i brzo uklanjanje neželjene dlake. Formula je obogaćena ekstraktima grejpfruta i bambusa, poznatih po svojim jakim antioksidativnim svojstvima. Nežna nega, ostavljajući vašu kožu svilenkastom glatkom i hidriranom.
+U pogodnoj udobnoj veličini za delikatnu oblast bikinija. Nakon redovne upotrebe, dlaka postaje mekša i finija.
+`,'Kozmetika')
+nizartikli.push(artikal102);
+
+const artikal103 = new Artikal([450],'Gel vostane trake',['neutral'],['no'],`Gel voštane trake za lice sa ekstraktom grejpfruta I bambusa,Linija kreirana za svaki tip kože, posebno za one osetljive. Uz inovativnu gel formulu za lako i brzo uklanjanje neželjene dlake. Formula je obogaćena ekstraktima grejpfruta i bambusa, poznatih po svojim jakim antioksidativnim svojstvima. Nežna nega, ostavljajući vašu kožu svilenkastom glatkom i hidriranom.
+U pogodnoj udobnoj veličini za depilaciju malih površina lica kao što su gornja usna i brada. Nakon redovne upotrebe, dlaka postaje mekša i finija.
+ `,'Kozmetika')
+nizartikli.push(artikal103);
+
+const artikal104 = new Artikal([280],'Glicerinski sapun Nar',['neutral'],['no'],`Glicerinski sapun ručno pravljen sa narom 80g,Nežna i bogata kremasta pena glicerinskog sapuna nežno čisti kožu dok održava prirodni nivo hidratacije. Kao rezultat toga, vaša koža je meka I glatka na dodir.`,'Kozmetika')
+nizartikli.push(artikal104);
+
+const artikal105 = new Artikal([280],'Glicerinski sapun Lubenica',['neutral'],['no'],`Glicerinski sapun ručno pravljen sa lubenicom 80g, Nežna i bogata kremasta pena glicerinskog sapuna nežno čisti kožu dok održava prirodni nivo hidratacije. Kao rezultat toga, vaša koža je meka I glatka na dodir.`,'Kozmetika')
+nizartikli.push(artikal105);
+
+const artikal106 = new Artikal([280],'Glicerinski sapun Mango',['neutral'],['no'],`Glicerinski sapun ručno pravljen sa mangom 80g, Nežna i bogata kremasta pena glicerinskog sapuna nežno čisti kožu dok održava prirodni nivo hidratacije. Kao rezultat toga, vaša koža je meka I glatka na dodir.`,'Kozmetika')
+nizartikli.push(artikal106);
+
+const artikal107 = new Artikal([280],'Glicerinski sapun Ruza Cokolada',['neutral'],['no'],`Glicerinski sapun ručno pravljen sa ružom i čokoladom 80g, Nežna i bogata kremasta pena glicerinskog sapuna nežno čisti kožu dok održava prirodni nivo hidratacije. Kao rezultat toga, vaša koža je meka I glatka na dodir.`,'Kozmetika')
+nizartikli.push(artikal107);
+
+const artikal108 = new Artikal([280],'Glicerinski sapun Magnolija',['neutral'],['no'],`Glicerinski sapun ručno pravljen sa magnolijom 80g, Nežna i bogata kremasta pena glicerinskog sapuna nežno čisti kožu dok održava prirodni nivo hidratacije. Kao rezultat toga, vaša koža je meka I glatka na dodir.`,'Kozmetika')
+nizartikli.push(artikal108);
+
+const artikal109 = new Artikal([280],'Glicerinski sapun Narandza',['neutral'],['no'],`Glicerinski sapun ručno pravljen sa naranǆom i kurakaom 80g,Nežna i bogata kremasta pena glicerinskog sapuna nežno čisti kožu dok održava prirodni nivo hidratacije. Kao rezultat toga, vaša koža je meka I glatka na dodir.`,'Kozmetika')
+nizartikli.push(artikal109);
+
+const artikal110 = new Artikal([280],'Glicerinski sapun Lavanda',['neutral'],['no'],`Glicerinski sapun ručno pravljen sa lavandom 80g,Nežna i bogata kremasta pena glicerinskog sapuna nežno čisti kožu dok održava prirodni nivo hidratacije. Kao rezultat toga, vaša koža je meka I glatka na dodir.`,'Kozmetika')
+nizartikli.push(artikal110);
+
+const artikal111 = new Artikal([280],'Glicerinski sapun Crvena Ruza',['neutral'],['no'],`Glicerinski sapun ručno pravljen sa crvenom ružom 80g,Nežna i bogata kremasta pena glicerinskog sapuna nežno čisti kožu dok održava prirodni nivo hidratacije. Kao rezultat toga, vaša koža je meka I glatka na dodir.`,'Kozmetika')
+nizartikli.push(artikal111);
+
+const artikal112 = new Artikal([280],'Glicerinski sapun Damask Ruza',['neutral'],['no'],`Glicerinski sapun ručno pravljen sa damask ružom 80g,Nežna i bogata kremasta pena glicerinskog sapuna nežno čisti kožu dok održava prirodni nivo hidratacije. Kao rezultat toga, vaša koža je meka I glatka na dodir.`,'Kozmetika')
+nizartikli.push(artikal112);
+
+const artikal113 = new Artikal([250],'Sapun sa ekstraktom Ruze',['neutral'],['no'],`ručno radjeni sapuni 50g`,'Kozmetika')
+nizartikli.push(artikal113);
+
+
+
+
+
 
 
 

@@ -1114,9 +1114,9 @@ footer p {
     background-color: #fefefe;
     margin: 15% auto;
     /* 15% from the top and centered */
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #888;
-    width: 80%;
+    width: 60%;
     /* Could be more or less, depending on screen size */
 }
 
@@ -1129,7 +1129,7 @@ footer p {
 }
 
 .right_contaier {
-    width: 822px;
+    width:800px ;
 
     height: 490px;
 
@@ -1142,7 +1142,7 @@ footer p {
 }
 
 .left_container {
-    width: 210px;
+    width: 200px;
     float: left;
     height: 400px;
 

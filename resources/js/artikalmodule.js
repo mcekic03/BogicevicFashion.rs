@@ -35,18 +35,19 @@ export function generacijaartikla(pod,pretraga=false){
      
         let slikehtml = ' ';
 
-        
+        if(e.podvrsta !='Kozmetika'){
+            e.boja.forEach(el => {
+                let  html = `<div class="col span-1-of-4 col boja ${el}">${el}</div>`
+                 bojehtml = bojehtml + html;
+             })
+             e.velicina.forEach(el => {
+                let html = `<div class="col span-1-of-4 vel">
+                         <p>${el}</p>
+                  </div>`
+                 velicinehtml = velicinehtml + html;
+             })
+        }
 
-        e.boja.forEach(el => {
-           let  html = `<div class="col span-1-of-4 col boja ${el}">${el}</div>`
-            bojehtml = bojehtml + html;
-        })
-        e.velicina.forEach(el => {
-           let html = `<div class="col span-1-of-4 vel">
-                    <p>${el}</p>
-             </div>`
-            velicinehtml = velicinehtml + html;
-        })
 
         divovi.forEach(el =>{
             if(el.dataset.ime === e.ime.trim()){
@@ -81,23 +82,26 @@ export function generacijaartikla(pod,pretraga=false){
                     <h3>Opis</h3>
                     <p class="opisartikal">${e.opis}</p>
                 </div>
-                <div>
+
+                ${e.podvrsta !='Kozmetika'? `<div>
                     <h3>Velicina</h3>
-                
-                <div class="velicinedostupne">
+            
+                    <div class="velicinedostupne">
+               
+                        <div class="odabirvelicine">
                    
-                    <div class="odabirvelicine">
-                       
-                    ${velicinehtml}
-                        
+                        ${velicinehtml}
+                    
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="odabirboje">
-               
+
+                <div class="odabirboje">
+           
                 ${bojehtml}
-               
-            </div>
+           
+                </div>`:' '}
+                
            
                 <div class="kolicinaiporuka">
                     <div class="col span-1-of-2">

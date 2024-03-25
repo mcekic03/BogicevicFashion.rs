@@ -9,6 +9,8 @@ import {generacijaartikla} from './artikalmodule.js'
 import {KorpaView} from './artikalmodule.js';
 import {Tablemeil} from './artikalmodule.js';
 
+let podvr = ' ';
+
 const godina = document.querySelector('.yeardinamic');
 const getsetYear = function(){
   const d = new Date();
@@ -178,36 +180,49 @@ if(JSON.parse(localStorage.getItem('homepodvrsta')))
   switch(stringic){
     case 'Unihop & push up':
       console.log(1)
+      podvr = ' ';
        html = generacijaartikla(stringic, false);
       prozorartikli.innerHTML = ' ';
       prozorartikli.insertAdjacentHTML("beforeend", html)
       break;
       case 'Mrezasti unihop':
         console.log(2)
+        podvr = ' ';
          html = generacijaartikla(stringic, false);
          prozorartikli.innerHTML = ' ';
          prozorartikli.insertAdjacentHTML("beforeend", html)
       break;
       case 'Dekorativni unihop':
         console.log(3)
+        podvr = ' ';
         html = generacijaartikla(stringic, false);
         prozorartikli.innerHTML = ' ';
          prozorartikli.insertAdjacentHTML("beforeend", html)
       break;
       case 'Samodrzece carape':
         console.log(4)
+        podvr = ' ';
         html = generacijaartikla(stringic, false);
         prozorartikli.innerHTML = ' ';
          prozorartikli.insertAdjacentHTML("beforeend", html)
       break;
       case 'Carape za halter':
         console.log(5)
+        podvr = ' ';
         html = generacijaartikla(stringic, false);
         prozorartikli.innerHTML = ' ';
          prozorartikli.insertAdjacentHTML("beforeend", html)
       break;
       case 'Zenski ves':
         console.log(6)
+        podvr = ' ';
+        html = generacijaartikla(stringic, false);
+        prozorartikli.innerHTML = ' ';
+         prozorartikli.insertAdjacentHTML("beforeend", html)
+      break;
+      case 'Kozmetika':
+        console.log(7)
+        podvr = 'Kozmetika';
         html = generacijaartikla(stringic, false);
         prozorartikli.innerHTML = ' ';
          prozorartikli.insertAdjacentHTML("beforeend", html)
@@ -228,13 +243,14 @@ window.addEventListener('click', function(e){
     switch(e.target.textContent){
       case 'Unihop & push up':
         console.log(1)
+        podvr = ' ';
         html = generacijaartikla(e.target.textContent, false);
         prozorartikli.innerHTML = ' ';
         prozorartikli.insertAdjacentHTML("beforeend", html)
         break;
         case 'Mrezasti unihop':
           console.log(2)
-          
+          podvr = ' ';
           html = generacijaartikla(e.target.textContent, false);
           prozorartikli.innerHTML = ' ';
         prozorartikli.insertAdjacentHTML("beforeend", html)
@@ -242,24 +258,35 @@ window.addEventListener('click', function(e){
         break;
         case 'Dekorativni unihop':
           console.log(3)
+          podvr = ' ';
           html = generacijaartikla(e.target.textContent, false);
           prozorartikli.innerHTML = ' ';
         prozorartikli.insertAdjacentHTML("beforeend", html)
         break;
         case 'Samodrzece carape':
           console.log(4)
+          podvr = ' ';
           html = generacijaartikla(e.target.textContent, false);
           prozorartikli.innerHTML = ' ';
         prozorartikli.insertAdjacentHTML("beforeend", html)
         break;
         case 'Carape za halter':
           console.log(5)
+          podvr = ' ';
           html = generacijaartikla(e.target.textContent, false);
           prozorartikli.innerHTML = ' ';
         prozorartikli.insertAdjacentHTML("beforeend", html)
         break;
         case 'Zenski ves':
           console.log(6)
+          podvr = ' ';
+          html = generacijaartikla(e.target.textContent, false);
+          prozorartikli.innerHTML = ' ';
+        prozorartikli.insertAdjacentHTML("beforeend", html)
+        break;
+        case 'Kozmetika':
+          console.log(7)
+          podvr = 'Kozmetika';
           html = generacijaartikla(e.target.textContent, false);
           prozorartikli.innerHTML = ' ';
         prozorartikli.insertAdjacentHTML("beforeend", html)
@@ -344,6 +371,11 @@ prozorartikli.addEventListener('click', function(e){
   }
 
   //addtocart
+  if(podvr === 'Kozmetika'){
+    izabranaboja = 'no';
+    izabranavelicina = 'no'
+  }
+
   if(e.target.classList.contains('addtocart')){
     if(izabranaboja == ' ' || izabranavelicina == ' '){
     modalporuka1.style.display = 'block';
@@ -358,8 +390,8 @@ prozorartikli.addEventListener('click', function(e){
     const ime = Artikalcartniz[0].textContent.trim().slice(6);
     const velicina = izabranavelicina;
     const boja = izabranaboja;
-    const kolicina = Artikalcartniz[4].children[0].children[1].children[0].children[0].value;
-    const cena = Number(Artikalcartniz[4].children[1].children[1].textContent);
+    const kolicina = Artikalcartniz[(podvr != ' '? 2:4)].children[0].children[1].children[0].children[0].value;
+    const cena = Number(Artikalcartniz[(podvr != ' '? 2:4)].children[1].children[1].textContent);
     
     const newcartArtikal = new ArtikalKorpa(cena,ime,boja,velicina,kolicina);
     nizKorpaArtikli = [];
